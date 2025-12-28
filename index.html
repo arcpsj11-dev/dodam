@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="도담한의원 - 체질에 맞는 맞춤 한약 처방">
+    <title>도담한의원 | 맞춤 한약 처방</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>도담한의원</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <!-- Home/Clinic Dropdown -->
+                <div class="dropdown">
+                    <a href="index.html" class="nav-link dropdown-toggle">
+                        도담한의원 <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#about" class="dropdown-item">한의원 소개</a>
+                        <a href="#philosophy" class="dropdown-item">진료 철학</a>
+                        <a href="#director" class="dropdown-item">원장 소개</a>
+                        <a href="#contact" class="dropdown-item">오시는 길</a>
+                    </div>
+                </div>
+
+                <a href="#diet" class="nav-link">다이어트</a>
+                <a href="#boyak" class="nav-link">보약</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:031-988-1575" class="header-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>031-988-1575</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider" id="hero">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="slide-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1920')">
+                    </div>
+                    <div class="slide-content">
+                        <p class="hero-subtitle">체질에 맞는 맞춤 처방</p>
+                        <h1 class="hero-title">
+                            <span class="title-accent">도담한의원</span>에서<br>
+                            건강한 변화를 시작하세요
+                        </h1>
+                        <a href="https://m.booking.naver.com/booking/13/bizes/857699?theme=place&service-target=map-pc&lang=ko&area=pll"
+                            target="_blank" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-check"></i>
+                            네이버 예약 바로가기
+                        </a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="slide-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1920')">
+                    </div>
+                    <div class="slide-content">
+                        <p class="hero-subtitle">환자를 가족처럼</p>
+                        <h1 class="hero-title">
+                            마음을 담은<br>
+                            <span class="title-accent">정성 어린 진료</span>
+                        </h1>
+                        <a href="#philosophy" class="btn btn-primary btn-lg">
+                            <i class="fas fa-heart"></i>
+                            진료 철학 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section" id="philosophy">
+        <div class="container">
+            <div class="row">
+                <div class="philosophy-content">
+                    <span class="section-tag">진료 철학</span>
+                    <h2 class="section-title">정성(精誠)이 닿지 않은<br>처방은 독(毒)과 같습니다</h2>
+
+                    <div class="philosophy-intro">
+                        <p>저는 치료의 시작이 처방 이전에 있다고 믿습니다.<br>
+                            환자의 몸에 들어가는 모든 것은 정직한 재료와 올바른 과정을 거쳐야 하며, 그 하나하나에 의료인의 책임이 담겨야 합니다.</p>
+                    </div>
+
+                    <div class="philosophy-details">
+                        <div class="p-item">
+                            <h3>1. 치료의 본질에 대한 질문</h3>
+                            <p>진료를 하며 늘 스스로에게 묻습니다.<br>
+                                “이 처방은 정말 환자의 몸을 위한 것인가.”<br>
+                                겉으로 편리하고 즉각적인 효과보다, 몸의 균형을 회복하고 기혈을 바로 세우는 것이 한의학의 본질이라 생각합니다.</p>
+                        </div>
+
+                        <div class="p-item">
+                            <h3>2. 정직한 재료, 정성스러운 과정</h3>
+                            <p>저의 진료 철학은 단순하지만 분명합니다. <strong>치료의 시작은 정직한 재료에서부터.</strong><br>
+                                환자의 몸에 들어가는 것은 단 1g이라도 가볍게 여길 수 없습니다.<br>
+                                약재의 산지와 상태를 직접 확인하고, 과정 하나하나를 소홀히 하지 않습니다.</p>
+                        </div>
+
+                        <div class="p-item">
+                            <h3>3. 몸이 먼저 알아보는 치료</h3>
+                            <p>좋은 치료는 설명보다 먼저 몸이 반응합니다.<br>
+                                몸 스스로 회복할 수 있는 힘을 키워주는 것이 목표입니다.</p>
+                            <blockquote class="p-quote">
+                                “내 가족에게 권할 수 없는 것은<br>환자에게도 권하지 않는다.”
+                            </blockquote>
+                            <p>이 원칙은 제가 한의사로서 서 있는 자리입니다.</p>
+                        </div>
+
+                        <div class="p-item">
+                            <h3>4. 함께 생각하는 진료</h3>
+                            <p>치료는 증상만을 보는 것이 아니라, 그 사람의 생활과 리듬, 그리고 앞으로의 시간을 함께 살피는 일입니다.<br>
+                                정성을 다한 진료로 곁에서 함께하겠습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="philosophy-image">
+                    <img src="images/philosophy.jpg" alt="진료 철학">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director Section -->
+    <section class="director-intro-section" id="director">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">원장 소개</h2>
+                <p class="section-subtitle">20년 임상 경력의 풍부한 노하우</p>
+            </div>
+            <div class="director-card">
+                <div class="director-img-box">
+                    <img src="images/director.jpg" alt="박승재 원장">
+                </div>
+                <div class="director-profile">
+                    <h3>대표원장 <span class="highlight">박승재</span></h3>
+                    <p class="director-message">
+                        "정성을 다해 가족을 치료하는 마음으로 진료합니다."
+                    </p>
+                    <ul class="director-career">
+                        <li>경희대학교 한의과대학 졸업</li>
+                        <li>경희대학교 한의과대학원 석사/박사</li>
+                        <li>전) 서울한방병원 진료부장</li>
+                        <li>현) 도담한의원 대표원장</li>
+                    </ul>
+                    <a href="doctor.html" class="btn btn-outline">
+                        자세히 보기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director's Book Section -->
+    <section class="book-section">
+        <div class="book-container">
+            <div class="book-image">
+                <img src="images/book_cover.png" alt="도담의 철학 - 박승재 원장 저">
+            </div>
+            <div class="book-info">
+                <span class="book-badge">원장 집필 도서</span>
+                <h2 class="book-title">바른 몸, 바른 마음을 위한<br>한의학 이야기</h2>
+                <p class="book-description">
+                    20년 임상 경험을 바탕으로 현대인의 만성 질환과 면역력 회복에 대한
+                    박승재 원장만의 치료 철학과 건강 관리법을 담았습니다.
+                    우리 몸의 자연 치유력을 깨우는 진정한 건강의 길을 제시합니다.
+                </p>
+                <div class="book-highlights">
+                    <div class="highlight-item">
+                        <strong>베스트셀러</strong>
+                        <span>건강/의학 부문</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>전문가 추천</strong>
+                        <span>한의학회 선정</span>
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <a href="#" class="btn btn-primary" onclick="alert('준비 중입니다.'); return false;">
+                        책 소개 자세히 보기 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">도담한의원 소개</h2>
+                <p class="section-subtitle">20년 전통의 한의원</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-doctor"></i>
+                    </div>
+                    <h3>전문 한의사</h3>
+                    <p>20년 경력의 전문 한의사가 직접 진료합니다</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-prescription-bottle-medical"></i>
+                    </div>
+                    <h3>맞춤 처방</h3>
+                    <p>체질에 맞는 1:1 맞춤 한약을 처방합니다</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>건강 관리</h3>
+                    <p>처방 후 꾸준한 건강 관리를 도와드립니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">도담한의원 블로그</h2>
+                <p class="section-subtitle">건강 정보와 한의학 이야기</p>
+            </div>
+            <div class="blog-grid">
+                <!-- Post 1: Ssanghwatang -->
+                <a href="https://blog.naver.com/ddhani14/224124822848" target="_blank" class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog_ssanghwatang.png" alt="쌍화탕 관련 글">
+                    </div>
+                    <div class="blog-info">
+                        <span class="blog-date">2024.12.28</span>
+                        <h3 class="blog-title">몸을 따뜻하게 녹여주는 전통 쌍화탕 이야기</h3>
+                    </div>
+                </a>
+                <!-- Post 2: Diet -->
+                <a href="https://blog.naver.com/ddhani14/224124774218" target="_blank" class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog_diet_medicine.png" alt="다이어트 관련 글">
+                    </div>
+                    <div class="blog-info">
+                        <span class="blog-date">2024.12.28</span>
+                        <h3 class="blog-title">건강한 체중 감량을 위한 한방 다이어트 가이드</h3>
+                    </div>
+                </a>
+                <!-- Post 3: Boyak -->
+                <a href="https://blog.naver.com/ddhani14/224124348801" target="_blank" class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog_boyak.png" alt="보약 관련 글">
+                    </div>
+                    <div class="blog-info">
+                        <span class="blog-date">2024.12.28</span>
+                        <h3 class="blog-title">원기 회복과 면역력 강화를 위한 맞춤 보약</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="blog-more">
+                <a href="https://blog.naver.com/ddhani14" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-blogger-b"></i>
+                    블로그 더보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">오시는 길</h2>
+                <p class="section-subtitle">도담한의원 위치 안내</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>주소</h4>
+                            <p>경기도 김포시 김포한강1로 227<br>광장프라자 311호</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-subway"></i>
+                        <div>
+                            <h4>교통안내</h4>
+                            <p>운양역 1번 출구 인근<br>(광장프라자 3층)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>전화</h4>
+                            <p><a href="tel:031-988-1575"
+                                    style="color: var(--color-primary); text-decoration: none;">031-988-1575</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>진료시간</h4>
+                            <p>평일 09:00 - 18:00<br>토요일 09:00 - 13:00<br>일요일/공휴일 휴진</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1579.394995589868!2d126.68136553596987!3d37.65414107201604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c86903a0d3b5f%3A0xd7e504204ffbb232!2z7Jq07JaR64-ZIOq0keyepe2UhOudvOyekA!5e0!3m2!1sko!2skr!4v1766893774671!5m2!1sko!2skr"
+                        width="100%" height="400" style="border:0; border-radius: 12px 12px 0 0;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <a href="https://map.naver.com/p/search/%EA%B9%80%ED%8F%AC%EC%8B%9C%20%EA%B9%80%ED%8F%AC%ED%95%9C%EA%B0%951%EB%A1%9C%20227"
+                        target="_blank" class="map-link-btn">
+                        <i class="fas fa-map-marked-alt"></i>
+                        네이버 지도에서 보기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>도담한의원</span>
+                </div>
+                <p class="footer-text">
+                    대표: 박승재 | 사업자등록번호: 123-45-67890<br>
+                    경기도 김포시 김포한강1로 227 광장프라자 311호 | Tel: 031-988-1575
+                </p>
+                <p class="footer-copyright">© 2024 도담한의원. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Side Menu -->
+    <div class="floating-menu" id="floatingMenu">
+        <a href="tel:031-988-1575" class="floating-btn phone-btn" title="전화 상담">
+            <i class="fas fa-phone"></i>
+            <span>전화</span>
+        </a>
+        <a href="https://open.kakao.com/" target="_blank" class="floating-btn kakao-btn" title="카카오톡 상담">
+            <i class="fas fa-comment"></i>
+            <span>카톡</span>
+        </a>
+        <a href="https://m.booking.naver.com/booking/13/bizes/857699?theme=place&service-target=map-pc&lang=ko&area=pll"
+            target="_blank" class="floating-btn consult-btn" title="네이버 예약">
+            <i class="fas fa-calendar-check"></i>
+            <span>예약</span>
+        </a>
+        <button class="floating-btn top-btn" id="topBtn" title="맨 위로">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">상담 신청이 완료되었습니다</span>
+    </div>
+
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
