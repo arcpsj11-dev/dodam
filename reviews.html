@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환자 후기 | 도담한의원</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>도담한의원</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <!-- 도담한의원 Dropdown -->
+                <div class="dropdown">
+                    <a href="index.html" class="nav-link dropdown-toggle">
+                        도담한의원 <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#about" class="dropdown-item">한의원 소개</a>
+                        <a href="index.html#philosophy" class="dropdown-item">진료 철학</a>
+                        <a href="doctor.html" class="dropdown-item">원장 소개</a>
+                        <a href="index.html#contact" class="dropdown-item">오시는 길</a>
+                    </div>
+                </div>
+
+                <!-- 예약하기 Dropdown -->
+                <div class="dropdown">
+                    <a href="booking.html" target="_blank" class="nav-link dropdown-toggle">
+                        예약하기 <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="booking.html" target="_blank" class="dropdown-item">실시간 진료현황</a>
+                        <a href="https://m.booking.naver.com/booking/13/bizes/857699?theme=place&service-target=map-pc&lang=ko&area=pll"
+                            target="_blank" class="dropdown-item">네이버 예약</a>
+                    </div>
+                </div>
+
+                <a href="index.html#diet" class="nav-link">다이어트</a>
+
+                <!-- 커뮤니티 Dropdown -->
+                <div class="dropdown">
+                    <a href="reviews.html" target="_blank" class="nav-link dropdown-toggle active">
+                        커뮤니티 <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="reviews.html" target="_blank" class="dropdown-item active">환자후기</a>
+                        <a href="qna.html" class="dropdown-item">상담문의(Q&A)</a>
+                    </div>
+                </div>
+
+                <a href="index.html#boyak" class="nav-link">보약</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-btns">
+                    <!-- Auth will be injected -->
+                </div>
+                <a href="tel:031-988-1575" class="header-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>031-988-1575</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--header-height);">
+        <!-- Page Header -->
+        <section class="page-header"
+            style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920'); background-size: cover; background-position: center; padding: 100px 0;">
+            <div class="container" style="text-align: center; color: white;">
+                <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px;">환자 후기</h1>
+                <p style="font-size: 1.2rem; opacity: 0.9;">도담한의원과 함께 건강을 되찾은 실제 환자분들의 정성 어린 후기입니다.</p>
+            </div>
+        </section>
+
+        <!-- Patient Reviews Section -->
+        <section class="reviews-section" id="reviews" style="background: white;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">생생한 <span class="highlight">치료 후기</span></h2>
+                    <p class="section-subtitle">많은 환자분들이 도담한의원에서 건강한 일상을 되찾으셨습니다.</p>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"20년 넘게 만성 소화불량으로 고생했는데, 박승재 원장님 처방받고 정말 많이 좋아졌어요. 이제는 식사 후에도 속이 편안합니다."
+                        </p>
+                        <div class="review-author">
+                            <div class="author-info">
+                                <strong>김O희 님</strong>
+                                <span>만성 소화불량 치료</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"한방 다이어트는 처음이었는데 식욕 조절이 너무 수월해서 놀랐습니다. 3개월 만에 10키로 감량하고 지금도 유지 잘하고 있어요!
+                            강추합니다."</p>
+                        <div class="review-author">
+                            <div class="author-info">
+                                <strong>이O우 님</strong>
+                                <span>다이어트 한약 복용</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"항상 기력이 없고 아침마다 일어나기 힘들었는데, 보약 한 채 지어 먹고 몸이 정말 가벼워졌습니다. 정성껏 진료해주셔서
+                            감사합니다."
+                        </p>
+                        <div class="review-author">
+                            <div class="author-info">
+                                <strong>정O호 님</strong>
+                                <span>기력 회복 보약</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="https://blog.naver.com/ddhani14" target="_blank" class="btn btn-primary">
+                        치료 사례 더보기 (블로그) <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>도담한의원</span>
+                </div>
+                <p class="footer-text">
+                    대표: 박승재 | 사업자등록번호: 123-45-67890<br>
+                    경기도 김포시 김포한강1로 227 광장프라자 311호 | Tel: 031-988-1575
+                </p>
+                <p class="footer-copyright">© 2024 도담한의원. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

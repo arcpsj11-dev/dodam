@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 진료 예약 | 도담한의원</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>도담한의원</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <!-- 도담한의원 Dropdown -->
+                <div class="dropdown">
+                    <a href="index.html" class="nav-link dropdown-toggle">
+                        도담한의원 <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#about" class="dropdown-item">한의원 소개</a>
+                        <a href="index.html#philosophy" class="dropdown-item">진료 철학</a>
+                        <a href="doctor.html" class="dropdown-item">원장 소개</a>
+                        <a href="index.html#contact" class="dropdown-item">오시는 길</a>
+                    </div>
+                </div>
+
+                <!-- 예약하기 Dropdown -->
+                <div class="dropdown">
+                    <a href="booking.html" target="_blank" class="nav-link dropdown-toggle active">
+                        예약하기 <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="booking.html" target="_blank" class="dropdown-item active">실시간 진료현황</a>
+                        <a href="https://m.booking.naver.com/booking/13/bizes/857699?theme=place&service-target=map-pc&lang=ko&area=pll"
+                            target="_blank" class="dropdown-item">네이버 예약</a>
+                    </div>
+                </div>
+
+                <a href="index.html#diet" class="nav-link">다이어트</a>
+
+                <!-- 커뮤니티 Dropdown -->
+                <div class="dropdown">
+                    <a href="reviews.html" target="_blank" class="nav-link dropdown-toggle">
+                        커뮤니티 <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="reviews.html" target="_blank" class="dropdown-item">환자후기</a>
+                        <a href="qna.html" class="dropdown-item">상담문의(Q&A)</a>
+                    </div>
+                </div>
+
+                <a href="index.html#boyak" class="nav-link">보약</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-btns">
+                    <!-- Auth will be injected -->
+                </div>
+                <a href="tel:031-988-1575" class="header-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>031-988-1575</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--header-height);">
+        <!-- Page Header -->
+        <section class="page-header"
+            style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1920'); background-size: cover; background-position: center; padding: 100px 0;">
+            <div class="container" style="text-align: center; color: white;">
+                <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px;">예약하기</h1>
+                <p style="font-size: 1.2rem; opacity: 0.9;">실시간 진료 현황을 확인하고 편하신 시간에 예약하세요.</p>
+            </div>
+        </section>
+
+        <!-- Reservation Status Section -->
+        <section class="reservation-status-section" id="booking" style="background: #f8fafc;">
+            <div class="container">
+                <div class="section-header">
+                    <div class="live-indicator">
+                        <span class="dot"></span>
+                        <span class="status-text">네이버 현황 실시간 동기화 중</span>
+                    </div>
+                    <h2 class="section-title">실시간 <span class="highlight">진료 현황</span></h2>
+                    <p class="section-subtitle">오늘의 진료 일정과 예약 가능 시간을 확인하세요.</p>
+                </div>
+                <div class="reservation-container">
+                    <!-- Calendar Side -->
+                    <div class="calendar-wrapper">
+                        <div class="calendar-header">
+                            <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                            <h3 id="currentMonthYear">2024.12</h3>
+                            <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day-name">일</div>
+                            <div class="day-name">월</div>
+                            <div class="day-name">화</div>
+                            <div class="day-name">수</div>
+                            <div class="day-name">목</div>
+                            <div class="day-name">금</div>
+                            <div class="day-name">토</div>
+                        </div>
+                        <div id="calendarDays" class="calendar-grid days">
+                            <!-- Days will be generated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Slots Side -->
+                    <div class="slots-wrapper">
+                        <div class="slots-header">
+                            <h3 id="selectedDateTitle">2024년 12월 28일 (토)</h3>
+                            <span>예약 현황</span>
+                        </div>
+                        <div class="slots-grid" id="reservationSlots">
+                            <!-- Slots will be generated by JS -->
+                        </div>
+                        <div class="slots-footer">
+                            <p>* 실제 예약은 네이버 예약을 통해 확정됩니다.</p>
+                            <a href="https://m.booking.naver.com/booking/13/bizes/857699?theme=place&service-target=map-pc&lang=ko&area=pll"
+                                target="_blank" class="btn btn-primary btn-full">네이버로 예약하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>도담한의원</span>
+                </div>
+                <p class="footer-text">
+                    대표: 박승재 | 사업자등록번호: 123-45-67890<br>
+                    경기도 김포시 김포한강1로 227 광장프라자 311호 | Tel: 031-988-1575
+                </p>
+                <p class="footer-copyright">© 2024 도담한의원. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

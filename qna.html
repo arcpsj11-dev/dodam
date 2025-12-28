@@ -31,11 +31,11 @@
 
                     <!-- 예약하기 Dropdown -->
                     <div class="dropdown">
-                        <a href="index.html#booking" class="nav-link dropdown-toggle">
+                        <a href="booking.html" target="_blank" class="nav-link dropdown-toggle">
                             예약하기 <i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu">
-                            <a href="index.html#booking" class="dropdown-item">실시간 진료현황</a>
+                            <a href="booking.html" target="_blank" class="dropdown-item">실시간 진료현황</a>
                             <a href="https://m.booking.naver.com/booking/13/bizes/857699?theme=place&service-target=map-pc&lang=ko&area=pll"
                                 target="_blank" class="dropdown-item">네이버 예약</a>
                         </div>
@@ -45,11 +45,11 @@
 
                     <!-- 커뮤니티 Dropdown -->
                     <div class="dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active">
+                        <a href="reviews.html" target="_blank" class="nav-link dropdown-toggle active">
                             커뮤니티 <i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu">
-                            <a href="index.html#reviews" class="dropdown-item">환자후기</a>
+                            <a href="reviews.html" target="_blank" class="dropdown-item">환자후기</a>
                             <a href="qna.html" class="dropdown-item active">상담문의(Q&A)</a>
                         </div>
                     </div>
@@ -57,6 +57,7 @@
                     <a href="index.html#boyak" class="nav-link">보약</a>
                 </nav>
                 <div class="header-btns">
+                    <!-- Auth will be injected -->
                     <a href="login.html" class="btn btn-primary">로그인</a>
                 </div>
             </div>
@@ -156,8 +157,22 @@
         </section>
     </main>
 
-    <!-- Footer (Same as index) -->
-    <footer class="footer">...</footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>도담한의원</span>
+                </div>
+                <p class="footer-text">
+                    대표: 박승재 | 사업자등록번호: 123-45-67890<br>
+                    경기도 김포시 김포한강1로 227 광장프라자 311호 | Tel: 031-988-1575
+                </p>
+                <p class="footer-copyright">© 2024 도담한의원. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
     <script>
