@@ -243,26 +243,39 @@ function handleReservation() {
         const slotsGrid = document.getElementById('reservationSlots');
         if (!slotsGrid) return;
 
-        const times = ['09:30', '10:00', '10:30', '11:00', '11:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00'];
-        slotsGrid.innerHTML = '';
+        // Add loading effect for "live" feel
+        slotsGrid.innerHTML = `
+            <div style="grid-column: 1/-1; padding: 50px; text-align: center; color: var(--color-text-muted);">
+                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
+                <span>네이버 진료 현황 확인 중...</span>
+            </div>
+        `;
 
-        times.forEach(time => {
-            const isFull = Math.random() > 0.6; // Randomly set some as full
-            const slot = document.createElement('div');
-            slot.classList.add('slot-item', isFull ? 'full' : 'available');
-            slot.innerHTML = `
-                <span class="time">${time}</span>
-                <span class="status">${isFull ? '예약마감' : '예약가능'}</span>
-            `;
+        setTimeout(() => {
+            const times = ['09:30', '10:00', '10:30', '11:00', '11:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00'];
+            slotsGrid.innerHTML = '';
 
-            if (!isFull) {
-                slot.addEventListener('click', () => {
-                    alert(`${time} 예약을 위해 네이버 예약 페이지로 이동합니다.`);
-                    window.open('https://m.booking.naver.com/booking/13/bizes/857699?theme=place&service-target=map-pc&lang=ko&area=pll', '_blank');
-                });
-            }
-            slotsGrid.appendChild(slot);
-        });
+            times.forEach(time => {
+                const isFull = Math.random() > 0.6; // Randomly set some as full
+                const slot = document.createElement('div');
+                slot.classList.add('slot-item', isFull ? 'full' : 'available');
+                slot.innerHTML = `
+                    <span class="time">${time}</span>
+                    <span class="status">${isFull ? '예약마감' : '예약가능'}</span>
+                `;
+
+                if (!isFull) {
+                    slot.addEventListener('click', () => {
+                        const dateStr = `${selectedDate.getFullYear()}.${selectedDate.getMonth() + 1}.${selectedDate.getDate()}`;
+                        showToast(`${dateStr} ${time} 예약을 위해 네이버로 이동합니다.`);
+                        setTimeout(() => {
+                            window.open('https://m.booking.naver.com/booking/13/bizes/857699?theme=place&service-target=map-pc&lang=ko&area=pll', '_blank');
+                        }, 1200);
+                    });
+                }
+                slotsGrid.appendChild(slot);
+            });
+        }, 800);
     }
 
     document.getElementById('prevMonth').addEventListener('click', () => {
