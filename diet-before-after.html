@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다이어트 비포애프터 | 도담한의원</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Simple auth check
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            alert('로그인이 필요한 페이지입니다.');
+            window.location.href = 'login.html';
+        }
+    </script>
+    <style>
+        .gallery-section {
+            padding: 120px 0 80px;
+            background: #f8fafc;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .gallery-card {
+            background: var(--color-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .compare-box {
+            display: flex;
+            background: #eee;
+            height: 250px;
+        }
+
+        .compare-img {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .compare-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .compare-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        .card-info {
+            padding: 25px;
+        }
+
+        .card-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--color-secondary);
+        }
+
+        .card-info .stats {
+            display: flex;
+            justify-content: space-between;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .weight-diff {
+            color: #e53e3e;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header (Same as index) -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">도담한의원</a>
+            <div class="nav-wrapper">
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">홈으로</a>
+                    <a href="diet-before-after.html" class="nav-link active">비포애프터</a>
+                </nav>
+                <div class="header-btns">
+                    <button class="btn btn-primary" onclick="logout()">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">다이어트 <span class="highlight">성공 사례</span></h2>
+                <p class="section-subtitle">도담한의원과 함께 만든 놀라운 변화를 확인하세요</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Case 1 -->
+                <div class="gallery-card">
+                    <div class="compare-box">
+                        <div class="compare-img">
+                            <img src="images/diet_case_1_before.png" alt="Before">
+                            <span class="compare-label">Before</span>
+                        </div>
+                        <div class="compare-img">
+                            <img src="images/diet_case_1_after.png" alt="After">
+                            <span class="compare-label">After</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>30대 여성 직장인 사례</h3>
+                        <div class="stats">
+                            <span>기간: 3개월</span>
+                            <span class="weight-diff">-12.5kg 감량</span>
+                        </div>
+                        <p class="section-subtitle" style="font-size: 0.9rem; text-align: left;">
+                            "식욕 조절이 정말 편했고, 요요 없이 유지 중입니다."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="gallery-card">
+                    <div class="compare-box">
+                        <div class="compare-img">
+                            <img src="images/diet_case_2_before.png" alt="Before">
+                            <span class="compare-label">Before</span>
+                        </div>
+                        <div class="compare-img">
+                            <img src="images/diet_case_2_after.png" alt="After">
+                            <span class="compare-label">After</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>40대 남성 복부비만 사례</h3>
+                        <div class="stats">
+                            <span>기간: 2개월</span>
+                            <span class="weight-diff">-8.2kg 감량</span>
+                        </div>
+                        <p class="section-subtitle" style="font-size: 0.9rem; text-align: left;">
+                            "복부 지방이 눈에 띄게 줄어 옷 태가 달라졌어요."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>
